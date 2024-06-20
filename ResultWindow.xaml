@@ -1,0 +1,46 @@
+﻿<Window x:Class="KrestikiNoliki.ResultWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KrestikiNoliki"
+        mc:Ignorable="d"
+        Title="ResultWindow" Height="500" Width="500"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid Background="DimGray">
+        <Border Background="White" MinWidth="300" Margin="15"
+                Padding="30" VerticalAlignment="Center" CornerRadius="30"
+                MaxWidth="350">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="Gray"
+                                  ShadowDepth="40">
+
+                </DropShadowEffect>
+            </Border.Effect>
+            <StackPanel>
+                <Border BorderThickness="0,0,0,1" BorderBrush="Gray">
+                    <TextBlock Text="Результат игры" FontWeight="Bold"
+                           FontSize="28" HorizontalAlignment="Center">
+                    </TextBlock>
+                </Border>
+                <TextBlock Margin="0,20,0,20" Name="TBolockResult"
+                           FontSize="20" HorizontalAlignment="Center">
+                </TextBlock>
+
+                <Grid Margin="20,0,20,0">
+                    <Button MinHeight="30" MinWidth="30" HorizontalAlignment="Left"
+                            Name="restartBtn" Click="restartBtn_Click">
+                        <Image Source="/Resources/restart.png"/>
+
+                    </Button>
+                    <Button MinHeight="30" MinWidth="30" HorizontalAlignment="Right"
+                            Name="menuBtn" Click="menuBtn_Click">
+                        <Image Source="/Resources/toMenu.png" />
+
+                    </Button>
+                </Grid>
+                
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
